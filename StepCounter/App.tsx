@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Accelerometer } from 'expo-sensors';
-import { Helmet } from 'react-helmet';
-
-
-
-
+import ReactDOM from 'react-dom';
 
 const App: React.FC = () => {
 
@@ -13,6 +9,13 @@ const App: React.FC = () => {
   const [distance, setDistance] = useState<number>(0);
 
   const averageStepLength = 0.82;
+
+  ReactDOM.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
 
   useEffect(() => {
     let subscription: Accelerometer.EventSubscription | null = null;
