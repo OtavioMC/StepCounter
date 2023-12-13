@@ -1,5 +1,6 @@
 # StepCounter
 
+# Under Development.
 
 # Simple step counter that can be used in your mobile.
 
